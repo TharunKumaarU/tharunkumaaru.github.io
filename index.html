@@ -4,502 +4,693 @@
     <title>tharunkumaar.u</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/aos.css">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /*======================================
+      //--//-->   ABOUT
+      ======================================*/
 
+      .about-mf .box-shadow-full {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
 
+      .about-mf .about-img {
+        margin-bottom: 2rem;
+      }
 
-<style>
+      .about-mf .about-img img {
+        margin-left: 10px;
+      }
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
+      .skill-mf .progress {
+        margin: 0.5rem 0 1.2rem 0;
+        border-radius: 0;
+        height: 0.7rem;
+      }
 
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+      .skill-mf .progress .progress-bar {
+        height: 0.7rem;
+        background-color: #ffbd39;
+      }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
+      /* Animation styles */
+      #typing-animation {
+        position: relative;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3s steps(20, end) infinite;
+      }
 
-.about-mf .about-img img {
-  margin-left: 10px;
-}
+      #typing-animation:before {
+        content: "";
+        animation: typing-cursor 0.5s ease-in-out infinite;
+      }
 
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
+      @keyframes typing-cursor {
+        from {
+          width: 5px;
+        }
+        to {
+          width: 0;
+        }
+      }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
+      /* project image zoom effect */
+      .zoom-effect {
+        overflow: hidden;
+        transition: transform 0.3s ease-out;
+      }
 
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+      .zoom-effect:hover {
+        transform: scale(1.1);
+      }
+    </style>
   </head>
+
+  <!--
+    Bootstrap's scroll spy:
+      data-spy="scroll"  -> enable scroll spy
+      data-target=".site-navbar-target" -> the .navbar element that highlights menu items
+      data-offset="300"  -> offset from top
+  -->
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Tharun Kumaar U</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <!-- NAVIGATION -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target"
+      id="ftco-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Tharun Kumaar U</a>
+        <button
+          class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle"
+          type="button"
+          data-toggle="collapse"
+          data-target="#ftco-nav"
+          aria-controls="ftco-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-			  <li class="nav-item"><a href="#achievement-section" class="nav-link"><span>Achievement</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello Everyone!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Tharun Kumaar U</span></h1>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item">
+              <a href="#home-section" class="nav-link"
+                ><span>Home</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link"
+                ><span>About</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#resume-section" class="nav-link"
+                ><span>Resume</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#experience-section" class="nav-link"
+                ><span>Experience</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#education-section" class="nav-link"
+                ><span>Education</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#project-section" class="nav-link"
+                ><span>Projects</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#achievement-section" class="nav-link"
+                ><span>Achievement</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#contact-section" class="nav-link"
+                ><span>Contact</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+    <!-- HOME SECTION -->
+    <section id="home-section" class="hero">
+      <div class="home-slider owl-carousel">
+        <div class="slider-item">
+          <div class="overlay"></div>
+          <div class="container">
+            <div
+              class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+              data-scrollax-parent="true"
+            >
+              <div
+                class="one-third js-fullheight order-md-last img"
+                style="background-image: url('images/bg_1.png');"
+              >
+                <div class="overlay"></div>
+              </div>
+              <div
+                class="one-forth d-flex align-items-center ftco-animate"
+                data-scrollax=" properties: { translateY: '70%' }"
+              >
+                <div class="text">
+                  <span class="subheading">Hello Everyone!</span>
+                  <h1 class="mb-4 mt-3">I'm <span>Tharun Kumaar U</span></h1>
 
-						<script>
+                  <!-- Animated Typing -->
+                  <span id="typing-animation"></span>
+                  <script>
+                    // Initialize the typing animation
+                    const typingAnimationElement =
+                      document.getElementById("typing-animation");
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+                    // Create an array of typing text
+                    const typingTexts = [
+                      "Engineer  ",
+                      "Data Analyst  ",
+                      "App Developer   ",
+                      "Network Supporter    ",
+                    ];
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineer  ',
-						'Data Analyst  ',
-						'Frontend Developer   ',
-						'Network Supporter    ',
-						];
+                    // Create a function to display the typing animation for a given text
+                    function playTypingAnimation(text) {
+                      // Loop through each character and add it to the element
+                      for (let i = 0; i < text.length; i++) {
+                        setTimeout(() => {
+                          typingAnimationElement.textContent += text[i];
+                        }, i * 200); // Increase the delay to slow down the typing animation
+                      }
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+                      // Once the animation is complete, reset and start next text
+                      setTimeout(() => {
+                        typingAnimationElement.textContent = "";
+                        const nextIndex =
+                          (typingTexts.indexOf(text) + 1) % typingTexts.length;
+                        playTypingAnimation(typingTexts[nextIndex]);
+                      }, text.length * 200);
+                    }
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+                    // Start the typing animation loop
+                    playTypingAnimation(typingTexts[0]);
+                  </script>
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h3>B.Tech Computer Science Student</h3>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">-->
-						<!-- <br> -->
-			            <p><a href="https://github.com/TharunKumaarU" class="btn btn-white btn-outline-white py-3 px-4", target="_blank">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s"><b>Name:</b> </span> <span>Tharun Kumaar U</span></p>
-										<p><span class="title-s"><b>Current Role:</b> </span> <span>Student</span></p>
-										<p><span class="title-s"><b>Experience:</b> </span> <span>Fresher</span></p>
-										<p><span class="title-s"><b>Location:</b> </span> <span>Ras Al-Khaimah, United Arab Emirates</span></p>
-										<p><span class="title-s"><b>Native:</b> </span> <span>Tamilnadu, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>SQL</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Visualization</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Networking Configuration</span> <span class="pull-right">65%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-
-									<span>Team Development</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>Currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Data Analytics at
-									Kalasalingam Academy of Research and Education. Currently enrolled in a semester exchange program on
-									Information and Communication Technology in Business at Pacific Link College - RAK Campus. Passionate
-									about Data Science and committed to becoming an impactful data scientist.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Retail, Agriculture, Healthcare &amp; IoT Applications</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology in Computer Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Tamil</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI &amp; Microsoft Excel</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Python, MySQL, HTML, CSS, JavaScript, Bootstrap &amp; Cisco Networking</span></li>
-									<li class="d-flex"><span>Hobbies:</span> <span>Traveling, Listening Music</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="10">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/tharun-kumaar-u/" class= "btn btn-primary py-3 px-3", target="_blank">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Aspiring Data Scientist and Tech Enthusiast with 2+ years of foundational knowledge in data analysis and machine learning models. Skilled in using tools like Power BI, Python, and MySQL to analyze data and derive insights. Eager to solve real-world problems through technology and continuous learning</p>
+                  <br /><br />
+                  <h3>B.Tech Computer Science Student</h3>
+                  <p>
+                    <a
+                      href="https://github.com/TharunKumaarU"
+                      class="btn btn-white btn-outline-white py-3 px-4"
+                      target="_blank"
+                      >My works</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-		<div class="row">
-			<h1 class="big-4">Research Project</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Jul 2023 - Sep 2023</span>
-						<h2>Research Student</h2>
-						<span class="position"> MultiCoreWare Inc.</span>
-						<p class="mt-4">MulticoreWare, a leading technology solutions provider with a global presence, has partnered with Kalasalingam Academy of Research and Education (KARE) to establish the MulticoreWare Academia Global Innovation Centre (MAGIC@KARE) for joint research activities. 
-							<ul>
-								<li>Focused on integrating camera, lidar, and radar data to enhance autonomous vehicle safety for unattended infantcare.</li>
-								<ul>
-									<li>Tech stack: BEVdet, CUDA</li>
-								</ul>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">Feb 2024 - May 2024</span>
-						<h2>Assisted in Networking Setup</h2>
-						<span class="position">Elysium Academy Pvt Ltd.</span>
-						<p class="mt-4">Elysium Academy is a leading software training institute offering courses in networking, programming, and data analysis. I assisted in setting up the network infrastructure, ensuring smooth operations for the academy. 
-							<ul>
-								<li>Assisted in configuring routers and switches, supporting network setup, troubleshooting, and maintenance to enhance performance and stability.</li>
-								<ul>
-									<li>PuTTY, LAN Trimming, Router & Switch configuration</li>
-								</ul>
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-Present</span>
-    					<h2>Bachelor of Technology, Computer Science</h2>
-						<ul>
-							<li>Specialization in Data Analytics</li>
-						</ul>
-    					<span class="position">Kalasalingam Academy of Research and Education</span>
-    					<p class="mt-4">CGPA: 8.25</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2024-Present</span>
-    					<h2>Associate Diploma, Information and Communication Technology in Business</h2>
-    					<span class="position">Pacific Link College - Rak Campus</span>
-    					
-    				</div>
-				</div>
-				<br>
-				<div class="col-md-6">
-						<div class="resume-wrap ftco-animate">
-							<span class="date">2021 - 2022</span>
-							<h2>12th Class</h2>
-							<ul>
-								<li>Mathematics and Computer Science</li>
-							</ul>
-							<span class="position">Amrita Vidyalayam - CBSE</span>
-							
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="resume-wrap ftco-animate">
-							<span class="date">2019 - 2020</span>
-							<h2>10th Class</h2>
-							<ul>
-								<li>Mathematics and Science</li>
-							</ul>
-							<span class="position">Amrita Vidyalayam - CBSE</span>
-							
-						</div>
-					</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="Tharun Kumaar u Resume.pdf" class="btn btn-primary py-4 px-5", target="_blank">Download CV</a></p>
-    			</div>
-    		</div>
-    	</div>
+      </div><!-- end .home-slider -->
     </section>
+    <!-- END HOME SECTION -->
 
-	<section class="ftco-section" id="achievement-section">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-3">
-				<div class="col-md-7 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Achievements</h1>
-					<h2 class="mb-4">Achievements</h2>
-				</div>
-			</div>
-			
-			<div class="row">
-				<!-- Achievement 1 -->
-				<div class="col-md-6">
-					<div class="achievement-gallery">
-						<h2>TECHX JIT MADRAS (IEEE - hackathon)</h2>
-						<div class="scroll-container">
-							<div class="scroll-content">
-								<img src="images/Hackathon Pize receiving.jpg" alt="Achievement 1 Picture 5">
-								<img src="images/Banner.jpg" alt="images/Banner.jpg Picture 1">
-								<img src="images/Explanation 2.jpg" alt="Achievement 1 Picture 2">
-								<img src="images/Working.jpg" alt="Achievement 1 Picture 3">
-								<img src="images/Explanation.jpg" alt="Achievement 1 Picture 4">
-							</div>
-						</div>
-						<h3 class="heading">Won ‘1st’ place with ₹10,000 cash reward in a 24-hour hackathon at Jeppiaar Institute of Technology</h3>
-						<br>
-						<br>
-						
-						<ul >
-							<li><b>Project Title:</b> AI-Driven Crop Disease Prediction System.</li>
-						  	<li><b>Technologies Used:</b>  Deep Learning, Convolutional Neural Networks (CNN), Streamlit for web application development.</li>
-						  	<li><b>Innovative Features:</b> Integrated autonomous edge computing and geo-trackers for real-time crop monitoring.</li>
-						  	<li><b>Dataset:</b> Preprocessed crop disease dataset from Kaggle using Python libraries like PIL, PyTorch, and colorama.</li>
-						  	<li><b>Outcome:</b> Developed an efficient, user-friendly web application for early detection and management of crop diseases.</li>
-						</ul>
-					</div>
-				</div>
-				
-				<!-- Achievement 2 -->
-				<div class="col-md-6">
-					<div class="achievement-gallery">
-						<h2>Smart India Hackathon (University Level)</h2>
-						<div class="scroll-container">
-							<div class="scroll-content">
-								<img src="images/pg1.jpg" alt="Achievement 1 Picture 5">
-								<img src="images/pg2.jpg" alt="images/Banner.jpg Picture 1">
-								<img src="images/pg3.jpg" alt="Achievement 1 Picture 2">
-								<img src="images/pg4.jpg" alt="Achievement 1 Picture 3">
-								<img src="images/pg5.jpg" alt="Achievement 1 Picture 4">
-								<img src="images/pg6.jpg" alt="Achievement 1 Picture 4">
-							</div>
-						</div>
-						<h3 class="heading">‘Qualified’ for the University-level Smart India Hackathon with an idea for a Drug Inventory and Supply Chain Tracking System</h3>
-						<br>
-						<ul >
-							<li><b>Problem Statement:</b> Tackling inefficiencies in drug inventory management and supply chain tracking for optimized logistics.</li>
-						  	<li><b>Proposed Solution:</b> Development of a Drug Inventory and Supply Chain Tracking System using NFC-enabled cards.</li>
-						  	<ol><b>Key Features:</b>
-							<li><b>NFC Cards:</b> Securely encrypt and store drug details, with decryption handled by authorized sellers</li>
-							<li><b>Data Analytics:</b> Analyze supply-demand trends to enhance decision-making and logistics planning</li>
-							<li><b>Centralized Dashboard:</b> Unified platform for monitoring inventory, tracking shipments, and managing stocks in real-time.</li>
-							<li><b>Low Stock Notifications:</b> Email alerts when stock levels fall below predefined thresholds</li>
-						</ol>
-						  	<li><b>Impact:</b>Streamlines supply chain operations, reduces drug shortages, and improves inventory management across pharmacies and hospitals.</li>
+    <!-- ABOUT SECTION -->
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="row d-flex align-items-stretch">
+            <div class="col-md-6 col-lg-5 d-flex">
+              <div class="img-about img d-flex align-items-stretch">
+                <div class="overlay">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-5">
+                      <div class="about-img">
+                        <img
+                          src="images/about-me.png"
+                          class="img-fluid rounded b-shadow-a"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                    <!-- Details next to profile image -->
+                    <div class="col-sm-6 col-md-7">
+                      <div class="about-info">
+                        <p>
+                          <span class="title-s"><b>Name:</b> </span>
+                          <span>Tharun Kumaar U</span>
+                        </p>
+                        <p>
+                          <span class="title-s"><b>Current Role:</b> </span>
+                          <span>Student</span>
+                        </p>
+                        <p>
+                          <span class="title-s"><b>Experience:</b> </span>
+                          <span>Internship-trained</span>
+                        </p>
+                        <p>
+                          <span class="title-s"><b>Location:</b> </span>
+                          <span>Dubai, United Arab Emirates</span>
+                        </p>
+                        <p>
+                          <span class="title-s"><b>Native:</b> </span>
+                          <span>Tamilnadu, India</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
 
-						</ul>
-					</div>
-				</div>
-		
-	</section>
-	
-   
+                  <div class="skill-mf">
+                    <p class="title-s">Skills</p>
+                    <span>SQL</span> <span class="pull-right">90%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 90%"
+                        aria-valuenow="95"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+
+                    <span>PYTHON</span> <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 85%"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+
+                    <span>Data Visualization</span>
+                    <span class="pull-right">70%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 70%"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+
+                    <span>Machine Learning</span>
+                    <span class="pull-right">75%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 75%"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+
+                    
+                    
+                    <span>Flutter</span> <span class="pull-right">60%</span>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 60%"
+                          aria-valuenow="95"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+
+                      <span>Firebase</span> <span class="pull-right">50%</span>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          role="progressbar"
+                          style="width: 50%"
+                          aria-valuenow="95"
+                          aria-valuemin="0"
+                          aria-valuemax="100"
+                        ></div>
+                      </div>
+
+                    <span>Networking Configuration</span>
+                    <span class="pull-right">65%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 65%"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+
+                    <span>Team Development</span>
+                    <span class="pull-right">85%</span>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        style="width: 85%"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+              <div class="row justify-content-start pb-3">
+                <div class="col-md-12 heading-section ftco-animate">
+                  <h1 class="big">About</h1>
+                  <h2 class="mb-4">About Me</h2>
+
+                  <p>
+                    Currently pursuing a B.Tech in Computer Science and
+                    Engineering with a specialization in Data Analytics at
+                    Kalasalingam Academy of Research and Education. Currently
+                    enrolled in a semester exchange program on Information and
+                    Communication Technology in Business at Pacific Link College
+                    - RAK Campus. Passionate about Data Science and committed to
+                    becoming an impactful data scientist.
+                  </p>
+                  <ul class="about-info mt-4 px-md-0 px-2">
+                    <li class="d-flex">
+                      <span>Domain:</span>
+                      <span>Data Analytics &amp; App Development </span>
+                    </li>
+                    <li class="d-flex">
+                      <span>Education:</span>
+                      <span
+                        >Bachelor of Technology in Computer Science [Specialization in Data Analysis]</span
+                      >
+                    </li>
+                    <li class="d-flex">
+                      <span>Language:</span>
+                      <span>English, Tamil, Hindi</span>
+                    </li>
+                    <li class="d-flex">
+                      <span>BI Tools:</span>
+                      <span>Microsoft Power BI &amp; Microsoft Excel</span>
+                    </li>
+                    <li class="d-flex">
+                      <span>Other Skills:</span>
+                      <span
+                        >Python, Java, Dart, MySQL, HTML, CSS, JavaScript, Flutter, Firebase,
+                        &amp; Cisco Networking</span
+                      >
+                    </li>
+                    <li class="d-flex">
+                      <span>Hobbies:</span>
+                      <span>Traveling, Listening Music</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                <div class="text">
+                  <p class="mb-4">
+                    <span class="number" data-number="10">0</span> <span>+</span>
+                    <span>&nbsp; Projects completed</span>
+                  </p>
+                  <p>
+                    <a
+                      href="https://www.linkedin.com/in/tharun-kumaar-u/"
+                      class="btn btn-primary py-3 px-3"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div><!-- end row d-flex align-items-stretch -->
+        </div><!-- end row -->
+      </div><!-- end container -->
+    </section>
+    <!-- END ABOUT SECTION -->
+
+    <!-- RESUME SECTION -->
+    <!-- RESUME SECTION -->
+<section class="ftco-section ftco-no-pb" id="resume-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Resume</h1>
+        <h2 class="mb-4">Resume</h2>
+        <p>
+          Aspiring Data Scientist and Tech Enthusiast with 2+ years
+          of foundational knowledge in data analysis and machine
+          learning models...
+        </p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6 text-center ftco-animate">
+        <!-- Flex container to keep buttons aligned side by side -->
+        <div class="d-flex justify-content-center">
+          <a
+            href="Tharun Kumaar u CV.pdf"
+            class="btn btn-primary py-4 px-5 mr-3"
+            target="_blank"
+            >Download Complete Professional Profile CV</a
+          >
+          <a
+            href="Tharun Kumaar u Resume.pdf"
+            class="btn btn-primary py-4 px-5"
+            target="_blank"
+            >Download Quick Reference Resume</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- END RESUME SECTION -->
+
+    <!-- EXPERIENCE SECTION -->
+    <section class="ftco-section ftco-no-pb" id="experience-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big-4">Experience</h1>
+            <div class="underline"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">February 2025 - Present</span>
+              <h2>App Development Intern</h2>
+              <p><b>Location:</b> Al Quasis - 1, Dubai, United Arab Emirates</p>
+              <span class="position">
+                <b>OOMMAA Group of Companies</b>
+              </span>
+              <p class="mt-4">
+                OOMMAA is a leading manpower provider based in the UAE since
+                2006, offering skilled workforce solutions across the UAE, Gulf,
+                Asia, Schengen, and Europe. The company specializes in labor
+                supply for industries like construction, logistics,
+                manufacturing, and retail, ensuring high standards in safety,
+                compliance, and technical training.
+                <br />
+                <b>My Role :</b> Developed a Handyman Service app
+                <ol>
+                  <li>
+                    Developed a Handyman Service Booking App using Flutter for
+                    the frontend and Firebase for backend services.
+                  </li>
+                  <li>
+                    Designed an intuitive and responsive UI to ensure a seamless
+                    booking experience for users.
+                  </li>
+                  <li>
+                    Integrated real-time authentication, database, and cloud
+                    functions with Firebase.
+                  </li>
+                  <li>Enabled service listings, booking confirmation.</li>
+                  <li>
+                    Conducted rigorous testing and deployed the app as an APK
+                    build for Android.
+                  </li>
+                </ol>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+    </section>
+    <!-- END EXPERIENCE SECTION -->
+
+    <!-- EDUCATION SECTION (contains your "Research Project" & "Education" items) -->
+    <section class="ftco-section ftco-no-pb" id="education-section">
+      <div class="container">
+        <!-- RESEARCH PROJECTS -->
+        <div class="row">
+          <h1 class="big-4">Research Project</h1>
+          <div class="underline"></div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Jul 2023 - Sep 2023</span>
+              <h2>Research Student</h2>
+              <span class="position">MultiCoreWare Inc.</span>
+              <p class="mt-4">
+                MulticoreWare, a leading technology solutions provider with a
+                global presence, has partnered with Kalasalingam Academy of
+                Research and Education (KARE) to establish the MulticoreWare
+                Academia Global Innovation Centre (MAGIC@KARE) for joint
+                research activities.
+                <ul>
+                  <li>
+                    Focused on integrating camera, lidar, and radar data to
+                    enhance autonomous vehicle safety for unattended infantcare.
+                  </li>
+                  <ul>
+                    <li>Tech stack: BEVdet, CUDA</li>
+                  </ul>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">Feb 2024 - May 2024</span>
+              <h2>Assisted in Networking Setup</h2>
+              <span class="position">Elysium Academy Pvt Ltd.</span>
+              <p class="mt-4">
+                Elysium Academy is a leading software training institute
+                offering courses in networking, programming, and data analysis.
+                I assisted in setting up the network infrastructure, ensuring
+                smooth operations for the academy.
+                <ul>
+                  <li>
+                    Assisted in configuring routers and switches, supporting
+                    network setup, troubleshooting, and maintenance to enhance
+                    performance and stability.
+                  </li>
+                  <ul>
+                    <li>PuTTY, LAN Trimming, Router &amp; Switch configuration</li>
+                  </ul>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+
+        <!-- FORMAL EDUCATION -->
+        <div class="row">
+          <h1 class="big-4">Education</h1>
+          <div class="underline"></div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2022-Present</span>
+              <h2>Bachelor of Technology, Computer Science</h2>
+              <ul>
+                <li>Specialization in Data Analytics</li>
+              </ul>
+              <span class="position"
+                >Kalasalingam Academy of Research and Education</span
+              >
+              <p class="mt-4">CGPA: 8.25</p>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2024-Present</span>
+              <h2>
+                Associate Diploma, Information and Communication Technology in
+                Business
+              </h2>
+              <span class="position">Pacific Link College - Rak Campus</span>
+            </div>
+          </div>
+          <br />
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2021 - 2022</span>
+              <h2>12th Class</h2>
+              <ul>
+                <li>Mathematics and Computer Science</li>
+              </ul>
+              <span class="position">Amrita Vidyalayam - CBSE</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+              <span class="date">2019 - 2020</span>
+              <h2>10th Class</h2>
+              <ul>
+                <li>Mathematics and Science</li>
+              </ul>
+              <span class="position">Amrita Vidyalayam - CBSE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END EDUCATION SECTION -->
+
+
+    <!-- PROJECT SECTION -->
     <section class="ftco-section" id="project-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
@@ -510,85 +701,266 @@
           </div>
         </div>
         <div class="row d-flex">
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">Bussiness dashboard for Alpha University</h3>
-				  <p>Designed an interactive PowerBI dashboard using a Kaggle dataset to analyze university sales data, showcasing trends and actionable insights</p>
-				  <ul>
-					<li>PowerBI, Excel, Kaggle, Data visualization, Dashboard creation, Data interpretation</li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/TharunKumaarU/Pizza_Sales_Insights/blob/main/pizza_Sales_analysis.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">Pizza Sales Insight</h3>
-				  <p>machine learning model(Linear Regression) to predict total_price(INR) using the dataset provided.</p>
-				  <ul>
-					<li>Excel, Kaggle, Data visualization, Data preprocessing, </li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/TharunKumaarU/Visualization_Charts/blob/main/Charts.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">Visualization_Charts</h3>
-				  <p>The dataset will include information on countries, their populations, GDP, life expectancy, education levels, internet usage, etc.</p>
-				  <ul>
-					<li>Python, Excel, Kaggle, Data visualization </li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		<div class="row d-flex justify-content-center">  
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/TharunKumaarU/ATM-PROJECT-USING-PYTHON-AND-MYSQL/blob/main/Atm%20project.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">ATM Project</h3>
-				  <p>Here is my first Python project with MySQL, which serves as a sample program demonstrating the functionality of an advanced ATM machine. This program stores and retrieves customer data.</p>
-				  <ul>
-					<li>Python, MySQL </li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-			<div class="col-md-4 d-flex ftco-animate">
-				<div class="blog-entry justify-content-end">
-				<a href="https://github.com/TharunKumaarU/Campus-Network-Case-Study/blob/main/Case%20Study.pkt", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
-				</a>
-				<div class="text mt-3 float-right d-block">
-  
-				  <h3 class="heading">ATM Project</h3>
-				  <p>Designed and simulated a comprehensive campus network using Cisco Packet Tracer, focusing on optimizing network topology for efficient data flow and connectivity across multiple buildings.</p>
-				<li>Cisco Packet Tracer </li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-	  </div>
+          <!-- Project 1 -->
+          <div class="row d-flex">
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a class="block-20 zoom-effect" style="background-image: url('images/proj_0.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">Handyman Service App for OOMMAA Groups of Companies</h3>
+                <p>Developed Mobile Application using Flutter as frontend and Firebase as backend</p>
+                <ul>
+                <li>Frontend Framework: Flutter (Dart)</li>
+                <li>Backend Services: Firebase</li>
+                <ol>
+                  <li>Firebase Authentication : User sign-in/sign-up</li>
+                  <li>Cloud Firestore : Real-time database for storing user and booking data</li>
+                </ol>
+                <li>Deployment: APK build for Android</li>
+                <li>UI/UX Design: Material Design with Flutter Widgets</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">Bussiness dashboard for Alpha University</h3>
+                <p>Designed an interactive PowerBI dashboard using a Kaggle dataset to analyze university sales data, showcasing trends and actionable insights</p>
+                <ul>
+                <li>PowerBI, Excel, Kaggle, Data visualization, Dashboard creation, Data interpretation</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a href="https://github.com/TharunKumaarU/Pizza_Sales_Insights/blob/main/pizza_Sales_analysis.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">Pizza Sales Insight</h3>
+                <p>machine learning model(Linear Regression) to predict total_price(INR) using the dataset provided.</p>
+                <ul>
+                <li>Excel, Kaggle, Data visualization, Data preprocessing, </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a href="https://github.com/TharunKumaarU/Visualization_Charts/blob/main/Charts.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">Visualization_Charts</h3>
+                <p>The dataset will include information on countries, their populations, GDP, life expectancy, education levels, internet usage, etc.</p>
+                <ul>
+                <li>Python, Excel, Kaggle, Data visualization </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+        <br>
+          
+           
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a href="https://github.com/TharunKumaarU/ATM-PROJECT-USING-PYTHON-AND-MYSQL/blob/main/Atm%20project.py", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">ATM Project</h3>
+                <p>Here is my first Python project with MySQL, which serves as a sample program demonstrating the functionality of an advanced ATM machine. This program stores and retrieves customer data.</p>
+                <ul>
+                <li>Python, MySQL </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex ftco-animate">
+              <div class="blog-entry justify-content-end">
+              <a href="https://github.com/TharunKumaarU/Campus-Network-Case-Study/blob/main/Case%20Study.pkt", target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+        
+                <h3 class="heading">ATM Project</h3>
+                <p>Designed and simulated a comprehensive campus network using Cisco Packet Tracer, focusing on optimizing network topology for efficient data flow and connectivity across multiple buildings.</p>
+              <li>Cisco Packet Tracer </li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+      
+        <!-- End last row -->
+      </div>
+    </section>
+    <!-- END PROJECT SECTION -->
 
+	<!-- ACHIEVEMENT SECTION -->
+    <section class="ftco-section" id="achievement-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Achievements</h1>
+			  <h2 class="mb-4">Achievements</h2>
+			</div>
+		  </div>
+  
+		  <div class="row">
+			<!-- Achievement 1 -->
+			<div class="col-md-6">
+			  <div class="achievement-gallery">
+				<h2>TECHX JIT MADRAS (IEEE - hackathon)</h2>
+				<div class="scroll-container">
+				  <div class="scroll-content">
+					<img
+					  src="images/Hackathon Pize receiving.jpg"
+					  alt="Achievement 1 Picture 5"
+					/>
+					<img
+					  src="images/Banner.jpg"
+					  alt="images/Banner.jpg Picture 1"
+					/>
+					<img
+					  src="images/Explanation 2.jpg"
+					  alt="Achievement 1 Picture 2"
+					/>
+					<img
+					  src="images/Working.jpg"
+					  alt="Achievement 1 Picture 3"
+					/>
+					<img
+					  src="images/Explanation.jpg"
+					  alt="Achievement 1 Picture 4"
+					/>
+				  </div>
+				</div>
+				<h3 class="heading">
+				  Won ‘1st’ place with ₹10,000 cash reward in a 24-hour hackathon
+				  at Jeppiaar Institute of Technology
+				</h3>
+				<br /><br />
+  
+				<ul>
+				  <li>
+					<b>Project Title:</b> AI-Driven Crop Disease Prediction System.
+				  </li>
+				  <li>
+					<b>Technologies Used:</b> Deep Learning, Convolutional Neural
+					Networks (CNN), Streamlit for web application development.
+				  </li>
+				  <li>
+					<b>Innovative Features:</b> Integrated autonomous edge
+					computing and geo-trackers for real-time crop monitoring.
+				  </li>
+				  <li>
+					<b>Dataset:</b> Preprocessed crop disease dataset from Kaggle
+					using Python libraries like PIL, PyTorch, and colorama.
+				  </li>
+				  <li>
+					<b>Outcome:</b> Developed an efficient, user-friendly web
+					application for early detection and management of crop
+					diseases.
+				  </li>
+				</ul>
+			  </div>
+			</div>
+  
+			<!-- Achievement 2 -->
+			<div class="col-md-6">
+			  <div class="achievement-gallery">
+				<h2>Smart India Hackathon (University Level)</h2>
+				<div class="scroll-container">
+				  <div class="scroll-content">
+					<img
+					  src="images/pg1.jpg"
+					  alt="Achievement 1 Picture 5"
+					/>
+					<img
+					  src="images/pg2.jpg"
+					  alt="images/Banner.jpg Picture 1"
+					/>
+					<img
+					  src="images/pg3.jpg"
+					  alt="Achievement 1 Picture 2"
+					/>
+					<img
+					  src="images/pg4.jpg"
+					  alt="Achievement 1 Picture 3"
+					/>
+					<img
+					  src="images/pg5.jpg"
+					  alt="Achievement 1 Picture 4"
+					/>
+					<img
+					  src="images/pg6.jpg"
+					  alt="Achievement 1 Picture 4"
+					/>
+				  </div>
+				</div>
+				<h3 class="heading">
+				  ‘Qualified’ for the University-level Smart India Hackathon with
+				  an idea for a Drug Inventory and Supply Chain Tracking System
+				</h3>
+				<br />
+				<ul>
+				  <li>
+					<b>Problem Statement:</b> Tackling inefficiencies in drug
+					inventory management and supply chain tracking for optimized
+					logistics.
+				  </li>
+				  <li>
+					<b>Proposed Solution:</b> Development of a Drug Inventory and
+					Supply Chain Tracking System using NFC-enabled cards.
+					<ol>
+					  <b>Key Features:</b>
+					  <li>
+						<b>NFC Cards:</b> Securely encrypt and store drug details,
+						with decryption handled by authorized sellers
+					  </li>
+					  <li>
+						<b>Data Analytics:</b> Analyze supply-demand trends to
+						enhance decision-making and logistics planning
+					  </li>
+					  <li>
+						<b>Centralized Dashboard:</b> Unified platform for
+						monitoring inventory, tracking shipments, and managing
+						stocks in real-time.
+					  </li>
+					  <li>
+						<b>Low Stock Notifications:</b> Email alerts when stock
+						levels fall below predefined thresholds
+					  </li>
+					</ol>
+				  </li>
+				  <li>
+					<b>Impact:</b>Streamlines supply chain operations, reduces
+					drug shortages, and improves inventory management across
+					pharmacies and hospitals.
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</div><!-- end container -->
+	  </section>
+	  <!-- END ACHIEVEMENT SECTION -->
+	   
 
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <!-- CONTACT SECTION -->
+    <section
+      class="ftco-section contact-section ftco-no-pb"
+      id="contact-section"
+    >
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
+        <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
@@ -598,95 +970,185 @@
 
         <div class="row d-flex contact-info mb-5">
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <ul>
-					<li><b>Current location:</b> Ras Al-Khaimah, United Arab Emirates</li>
-					<li><b>Native location:</b>  Ramanathapuram, Tamilnadu, India</li>
-				</ul>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <ul>
+                <li><b>Current location:</b> Dubai, United Arab Emirates</li>
+                <li><b>Native location:</b> Ramanathapuram, Tamilnadu, India</li>
+              </ul>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel:+971563651564">+971 56 365 1564</a></p>
-				<p><a href="tel:+918489644851">+91 84896 44851</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="icon-phone2"></span>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p>
+                <a href="tel:+971563651564">+971 56 365 1564</a>
+              </p>
+              <p>
+                <a href="tel:+918489644851">+91 84896 44851</a>
+              </p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:tharunkumaar.u@gmail.com">tharunkumaar.u@gmail.com</a></p>
-	          </div>
+            <div class="align-self-stretch box p-4 text-center">
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+              >
+                <span class="icon-paper-plane"></span>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p>
+                <a href="mailto:tharunkumaar.u@gmail.com"
+                  >tharunkumaar.u@gmail.com</a
+                >
+              </p>
+            </div>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="Tharun Kumaar u Resume.pdf", target="_blank">resumelink</a></p>
-	          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <!-- Icon -->
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+          
+              <!-- Heading -->
+              <h3 class="mb-4">DOWNLOAD CV / RESUME</h3>
+          
+              <!-- Links (Stacked) -->
+              <p>
+                <a 
+                  href="Tharun Kumaar u Resume.pdf" 
+                  target="_blank"
+                  class="btn btn-primary mb-2"
+                >
+                  Resume Link
+                </a>
+              </p>
+              <p>
+                <a 
+                  href="Tharun Kumaar u CV.pdf" 
+                  target="_blank"
+                  class="btn btn-primary"
+                >
+                  CV Link
+                </a>
+              </p>
+            </div>
           </div>
+          
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/hmNkfk4HZfSr26CK8" class="btn btn-primary py-3 px-5", target="_blank">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/tharun-kumaar-u/", target="_blank"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://x.com/im_tharunkumaar", target="_blank"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100026054344299", target="_blank"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/iamtharunkumaar/", target="_blank"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+          <div class="container">
+            <br /><br />
+            <div class="row justify-content-center">
+              <div class="col-md-7 ftco-animate text-center">
+                <h2>
+                  Have a<span> Question? </span>
+                  <a
+                    href="https://forms.gle/hmNkfk4HZfSr26CK8"
+                    class="btn btn-primary py-3 px-5"
+                    target="_blank"
+                    >Click Here</a
+                  >
+                </h2>
+              </div>
+            </div>
+            <br />
+            <ul
+              class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0"
+            >
+              <li class="ftco-animate normal-txt">Find me on</li>
+              <li class="ftco-animate">
+                <a
+                  href="https://www.linkedin.com/in/tharun-kumaar-u/"
+                  target="_blank"
+                  ><span class="icon-linkedin"></span
+                ></a>
+              </li>
+              <li class="ftco-animate">
+                <a href="https://x.com/im_tharunkumaar" target="_blank"
+                  ><span class="icon-twitter"></span
+                ></a>
+              </li>
+              <li class="ftco-animate">
+                <a
+                  href="https://www.facebook.com/profile.php?id=100026054344299"
+                  target="_blank"
+                  ><span class="icon-facebook"></span
+                ></a>
+              </li>
+              <li class="ftco-animate">
+                <a
+                  href="https://www.instagram.com/iamtharunkumaar/"
+                  target="_blank"
+                  ><span class="icon-instagram"></span
+                ></a>
+              </li>
+            </ul>
+            <br />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END CONTACT SECTION -->
 
-
- 
-	
     <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <!-- You can place footer info here -->
+          </div>
+        </div>
+      </div>
+    </footer>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div>
 
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <!-- JS Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
