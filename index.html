@@ -117,6 +117,7 @@ main{display:flex;flex-direction:column;gap:24px;min-width:0}
 .job.now::before{border-color:var(--ok);background:var(--ok)}
 .job::after{content:'';position:absolute;left:7px;top:20px;bottom:0;width:1px;background:var(--line)}
 .job:last-child::after{display:none}
+.dur{opacity:.85;white-space:nowrap}
 .job-when{font-family:var(--mono);font-size:11.6px;color:var(--ink-3);margin-bottom:3px}
 .job h3{font-size:15.5px;font-weight:700}
 .job-org{font-size:12.8px;color:var(--ink-2);margin-bottom:10px}
@@ -171,7 +172,7 @@ footer{text-align:center;font-family:var(--mono);font-size:11.6px;color:var(--in
     <a class="dl" href="Tharun_Kumaar_U_Resume.pdf" download><svg class="gi" aria-hidden="true"><use href="#u-download"/></svg> Download résumé</a>
 
     <dl class="kv">
-      <div><dt>Experience</dt><dd>~2 years</dd></div>
+      <div><dt>Experience</dt><dd><span class="dur" data-from="2025-01" data-to="">1 yr 8 mo</span></dd></div>
       <div><dt>Focus</dt><dd>Backend &amp; platform</dd></div>
       <div><dt>Visa</dt><dd>UAE resident to 2028</dd></div>
       <div><dt>Education</dt><dd>B.Tech CSE, Distinction</dd></div>
@@ -186,9 +187,8 @@ footer{text-align:center;font-family:var(--mono);font-size:11.6px;color:var(--in
     <section class="card intro">
       <h2><svg class="gi" aria-hidden="true"><use href="#u-arrow"/></svg> Profile</h2>
       <p>
-        I build backend systems, mobile apps, and the deployments behind them. Over the past two years
-        I've put <strong>five enterprise platforms into production</strong> for clients across the UAE and
-        the Gulf.
+        I build backend systems, mobile apps, and the deployments behind them. Since January 2025 I've put
+        <strong>five enterprise platforms into production</strong> for clients across the UAE and the Gulf.
       </p>
       <p>
         The deployment side is where I differ from most people at my level: containers on Ubuntu behind
@@ -274,19 +274,19 @@ footer{text-align:center;font-family:var(--mono);font-size:11.6px;color:var(--in
       <h2><svg class="gi" aria-hidden="true"><use href="#u-doc"/></svg> Experience</h2>
       
       <div class="job now">
-        <div class="job-when">Oct 2025 — Present</div>
+        <div class="job-when">Oct 2025 — Present <span class="dur" data-from="2025-10" data-to="">· 11 mo</span></div>
         <h3>Software Developer</h3>
         <div class="job-org">Missan IT Solutions · Sharjah, UAE </div>
         <ul><li>Work across the whole of each platform: schema, API, dashboard, mobile app and the production server.</li><li>Two deployment stacks: Docker Compose on Ubuntu with nginx, GHCR and CI/CD, and Windows Server IIS builds on-premise.</li><li>Install and configure Windream ECM in client environments; production support across five live deployments.</li><li>Production incident work on live systems. Every data fix ships with a tested repair and rollback script.</li><li>Own the mobile release cycle: versioning, internal-track QA and Play Store releases.</li></ul>
       </div>
       <div class="job">
-        <div class="job-when">Jul 2025 — Sep 2025</div>
+        <div class="job-when">Jul 2025 — Sep 2025 <span class="dur" data-from="2025-07" data-to="2025-09">· 3 mo</span></div>
         <h3>Software Engineer Intern</h3>
         <div class="job-org">Missan IT Solutions · Sharjah, UAE <span class="tag">Converted to full time</span></div>
         <ul><li>First API modules and proof-of-concept features in FastAPI, Docker and REST.</li><li>Three-person project teams. Picked up SuperTokens, RBAC and multi-tenant patterns.</li></ul>
       </div>
       <div class="job">
-        <div class="job-when">Jan 2025 — Jun 2025</div>
+        <div class="job-when">Jan 2025 — Jun 2025 <span class="dur" data-from="2025-01" data-to="2025-06">· 6 mo</span></div>
         <h3>App Developer & Digital Operations Coordinator</h3>
         <div class="job-org">OOMMAA Group of Companies · Dubai, UAE </div>
         <ul><li>Handyman service booking prototype in Flutter and Firebase, used to specify requirements for an external dev team.</li><li>OTP authentication, Firestore real-time sync, GPS service matching, push notifications.</li></ul>
@@ -330,5 +330,26 @@ footer{text-align:center;font-family:var(--mono);font-size:11.6px;color:var(--in
     <footer>© 2026 Tharun Kumaar U · Sharjah, UAE</footer>
   </main>
 </div>
+
+<script>
+(function () {
+  var now = new Date(), NY = now.getFullYear(), NM = now.getMonth() + 1;
+  function span(from, to) {
+    var f = from.split('-'), y1 = +f[0], m1 = +f[1], y2, m2;
+    if (to) { var t = to.split('-'); y2 = +t[0]; m2 = +t[1]; } else { y2 = NY; m2 = NM; }
+    return Math.max(1, (y2 - y1) * 12 + (m2 - m1) + 1);   // inclusive of both months
+  }
+  function human(n) {
+    var y = Math.floor(n / 12), m = n % 12, out = [];
+    if (y) out.push(y + ' yr' + (y > 1 ? 's' : ''));
+    if (m) out.push(m + ' mo');
+    return out.join(' ') || '0 mo';
+  }
+  document.querySelectorAll('.dur').forEach(function (el) {
+    var txt = human(span(el.dataset.from, el.dataset.to));
+    el.textContent = el.textContent.trim().charAt(0) === '·' ? '· ' + txt : txt;
+  });
+})();
+</script>
 </body>
 </html>
