@@ -1,3 +1,5 @@
 .DS_Store
 _site_deploy/
 node_modules/
+.cv-draft/
+Claude outputs/
